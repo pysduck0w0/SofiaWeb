@@ -112,7 +112,74 @@ a:active {
     border-bottom: none;
 }
 
+/* 手機 / 平板 RWD(下面這段由Chatgpt提供) */
 
+/* 1. 寬度小於 992px：平板直立、比較窄的螢幕 */
+@media (max-width: 992px) {
+    .content-area {
+        flex-direction: column;
+        /* 改成直排 */
+        align-items: center;
+        /* 置中 */
+        gap: 30px;
+        /* 間距小一點 */
+        padding: 0 20px 60px 20px;
+        /* 左右縮一點 */
+    }
+
+    .title {
+        margin-top: 90px;
+        /* 導覽列下面多留一點 */
+        margin-bottom: 20px;
+    }
+
+    .photo-box img {
+        width: min(70vw, 320px);
+        /* 手機不要太大 */
+        height: auto;
+        margin-bottom: 0;
+    }
+
+    .contents {
+        max-width: 95vw;
+        /* 內容跟著螢幕走 */
+        font-size: 30px;
+        /* 維持原本大小 */
+    }
+}
+
+/* 2. 寬度小於 600px：一般手機 */
+@media (max-width: 600px) {
+
+    /* 導覽列：字靠近一點 */
+    .navbar {
+        padding: 15px 10px;
+    }
+
+    .navbar a {
+        margin-right: 3px;
+        padding: 8px 6px;
+        font-size: 15px;
+    }
+
+    .title h1 {
+        font-size: 45px;
+        /* 標題縮小一點 */
+    }
+
+    .contents {
+        max-width: 100%;
+        font-size: 30px;
+        /* 維持原本大小 */
+        line-height: 1.6;
+        text-align: left;
+    }
+
+    /* 確保圖片在最上方 */
+    .content-area {
+        flex-direction: column;
+    }
+}
 
 
 
