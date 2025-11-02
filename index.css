@@ -190,6 +190,17 @@ a:active {
     }
 }
 
+@media (max-width: 768px) {
+    div[style*="text-align: justify"] {
+        text-align: left !important;
+        max-width: 100% !important;
+        margin: 0 16px !important;
+        font-size: 30px;
+        line-height: 1.8;
+    }
+}
+
+
 
 
 
