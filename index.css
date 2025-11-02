@@ -116,62 +116,78 @@ a:active {
 
 /* --- 平板版 (寬度 ≤ 992px) --- */
 @media (max-width: 992px) {
-  .content-area {
-    flex-direction: column;      /* 改成直排 */
-    align-items: center;         /* 置中 */
-    gap: 30px;                   /* 保留間距 */
-    padding: 0 20px 60px 20px;   /* 左右留白一點 */
-  }
+    .content-area {
+        flex-direction: column;
+        /* 改成直排 */
+        align-items: center;
+        /* 置中 */
+        gap: 30px;
+        /* 保留間距 */
+        padding: 0 20px 60px 20px;
+        /* 左右留白一點 */
+    }
 
-  .title {
-    margin-top: 90px;
-    margin-bottom: 20px;
-  }
+    .title {
+        margin-top: 90px;
+        margin-bottom: 20px;
+    }
 
-  .photo-box img {
-    width: min(70vw, 320px);     /* 手機不會太大 */
-    height: auto;
-    margin-bottom: 0;
-  }
+    .photo-box img {
+        width: min(70vw, 320px);
+        /* 手機不會太大 */
+        height: auto;
+        margin-bottom: 0;
+    }
 
-  .contents {
-    max-width: 95vw;             /* 跟螢幕寬度走 */
-    font-size: 28px;             /* 字稍微小一點 */
-    padding: 0 20px;             /* 加入左右留白 */
-    line-height: 1.8;            /* 行距維持舒服 */
-    text-align: justify;         /* 左右對齊段落 */
-  }
+    .contents {
+        max-width: 95vw;
+        /* 跟螢幕寬度走 */
+        font-size: 28px;
+        /* 字稍微小一點 */
+        padding: 0 20px;
+        /* 加入左右留白 */
+        line-height: 1.8;
+        /* 行距維持舒服 */
+        text-align: justify;
+        /* 左右對齊段落 */
+    }
 }
 
 /* --- 手機版 (寬度 ≤ 600px) --- */
 @media (max-width: 600px) {
-  /* 導覽列：字靠近一點 */
-  .navbar {
-    padding: 15px 10px;
-  }
 
-  .navbar a {
-    margin-right: 3px;
-    padding: 8px 6px;
-    font-size: 15px;
-  }
+    /* 導覽列：字靠近一點 */
+    .navbar {
+        padding: 15px 10px;
+    }
 
-  .title h1 {
-    font-size: 45px;             /* 標題縮小一點 */
-  }
+    .navbar a {
+        margin-right: 3px;
+        padding: 8px 6px;
+        font-size: 15px;
+    }
 
-  .contents {
-    max-width: 95%;              /* 不要貼滿邊 */
-    font-size: 24px;             /* 手機字體更柔和 */
-    line-height: 1.8;
-    text-align: justify;         /* 文字左右對齊 */
-    padding: 0 15px;             /* 內縮一點空間 */
-  }
+    .title h1 {
+        font-size: 45px;
+        /* 標題縮小一點 */
+    }
 
-  /* 圖片在上方 */
-  .content-area {
-    flex-direction: column;
-  }
+    .contents {
+        max-width: 95%;
+        /* 不要貼滿邊 */
+        font-size: 24px;
+        /* 手機字體更柔和 */
+        line-height: 1.8;
+        text-align: justify;
+        /* 文字左右對齊 */
+        padding: 0 15px;
+        /* 內縮一點空間 */
+    }
+
+    /* 圖片在上方 */
+    .content-area {
+        flex-direction: column;
+    }
 }
 
 
