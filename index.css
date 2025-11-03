@@ -154,6 +154,42 @@ a:active {
 }
 
 /* --- 手機版 (寬度 ≤ 600px) --- */
+@media (max-width: 992px) {
+    .content-area {
+        flex-direction: column;
+        /* 改成直排 */
+        align-items: center;
+        /* 置中 */
+        gap: 30px;
+        /* 保留間距 */
+        padding: 0 20px 60px 20px;
+        /* 左右留白一點 */
+    }
+
+    .title {
+        margin-top: 90px;
+        margin-bottom: 20px;
+    }
+
+    .photo-box img {
+        width: min(70vw, 320px);
+        /* 手機不會太大 */
+        height: auto;
+        margin-bottom: 0;
+    }
+
+    .contents {
+        max-width: 95vw;
+        padding: 0 20px;
+        font-size: 26px;
+        /* 原本 28px，可視覺感受微調 */
+        line-height: 1.8;
+        text-align: left;
+        /* ← 這裡也從 justify 改成 left */
+    }
+}
+
+/* --- 手機版 (寬度 ≤ 600px) --- */
 @media (max-width: 600px) {
 
     /* 導覽列：字靠近一點 */
@@ -172,25 +208,26 @@ a:active {
         /* 標題縮小一點 */
     }
 
-    .contents {
-        max-width: 95%;
-        /* 不要貼滿邊 */
-        font-size: 24px;
-        /* 手機字體更柔和 */
+    .contents{
+    max-width: 95vw;
+        padding: 0 16px;
+        /* 原本有 0 15px，保留/微調皆可 */
+        font-size: 22px;
+        /* 24px 可以改小點，閱讀更舒服 */
         line-height: 1.8;
-        text-align: justify;
-        /* 文字左右對齊 */
-        padding: 0 15px;
-        /* 內縮一點空間 */
+        text-align: left;
+        /* ← 這裡從 justify 改成 left */
+        text-justify: auto;
+        word-break: break-word;
+        /* 長字不會爆版 */
     }
-
     /* 圖片在上方 */
     .content-area {
         flex-direction: column;
     }
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     div[style*="text-align: justify"] {
         text-align: left !important;
         max-width: 100% !important;
@@ -198,10 +235,17 @@ a:active {
         font-size: 30px;
         line-height: 1.8;
     }
-}
+} */
 
+@media (max-width: 768px) {
+    div[style*="text-align: justify"] {
+        text-align: left !important;
+        margin: 0 16px !important;
+        max-width: 100% !important;
+    }
+}
 .page-text {
-    max-width: 1200px;
+    max-width: 1000px;
     /* 桌機寬度一樣維持中間這條 */
     margin: 0 auto;
     /* 置中 */
@@ -213,15 +257,20 @@ a:active {
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
     .page-text {
-        max-width: 100%;
-        padding: 0 18px 40px;
-        /* ← 手機左右改成 18px，就不會貼邊 */
-        font-size: 30px;
-        /* 手機字小一點比較好閱讀 */
+        text-align: left;
+        padding: 0 20px;
     }
 }
+
+@media (max-width: 600px) {
+    .page-text {
+        text-align: left;
+        padding: 0 16px;
+    }
+}
+
 
 
 
