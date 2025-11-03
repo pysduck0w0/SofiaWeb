@@ -200,6 +200,30 @@ a:active {
     }
 }
 
+.page-text {
+    max-width: 1200px;
+    /* 桌機寬度一樣維持中間這條 */
+    margin: 0 auto;
+    /* 置中 */
+    padding: 0 80px 60px;
+    /* 左右留白、下面留一點空間 */
+    line-height: 1.8;
+    font-size: 30px;
+    text-align: justify;
+}
+
+
+@media (max-width: 768px) {
+    .page-text {
+        max-width: 100%;
+        padding: 0 18px 40px;
+        /* ← 手機左右改成 18px，就不會貼邊 */
+        font-size: 30px;
+        /* 手機字小一點比較好閱讀 */
+    }
+}
+
+
 
 
 
