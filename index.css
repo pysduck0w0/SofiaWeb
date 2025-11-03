@@ -244,13 +244,7 @@ a:active {
         text-align: left !important;
         margin: 0 16px !important;
         max-width: 100% !important;
-        padding: 0 18px 40px;
-        font-size: 30px;
-        line-height: 1.8;
-        text-align: left;
-        /*  改成靠左對齊，不要 justify */
-        word-break: break-word;
-        /* 中文自然換行 */
+        
     }
 
     .page-text p {
@@ -284,6 +278,7 @@ a:active {
         padding: 0 16px;
     }
 }
+
 
 
 
