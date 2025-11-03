@@ -238,10 +238,17 @@ a:active {
 } */
 
 @media (max-width: 768px) {
-    div[style*="text-align: justify"] {
+
+    /* 只針對自傳與內容段落調整，不影響其他區塊 */
+    .page-text {
         text-align: left !important;
         margin: 0 16px !important;
         max-width: 100% !important;
+    }
+
+    .page-text p {
+        text-indent: 2em;
+        margin: 0 0 0.8em;
     }
 }
 .page-text {
@@ -270,6 +277,7 @@ a:active {
         padding: 0 16px;
     }
 }
+
 
 
 
